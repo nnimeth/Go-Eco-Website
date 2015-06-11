@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GO ECO</title>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script>
+
+		$(document).ready(function(){
+				var currImg = 0;
+				var images = new Array();
+				images[0] = "photosSurf/1.jpg";
+				images[1] = "photosSurf/2.jpg";
+				images[2] = "photosSurf/3.jpg";
+				
+
+				$("#leftArrow").click(function(){
+					swapImage("left");
+				});
+
+				$("#rightArrow").click(function(){
+					swapImage("right");
+				});
+
+				function swapImage( src ){
+					
+
+					if(src == "left"){
+						if(currImg == 0){
+							currImg = 2;
+						}else{
+							currImg--;
+						}
+					}else if(src == "right"){
+						if(currImg == 2){
+							currImg = 0;
+						}else{
+							currImg++;
+						}
+					}
+
+					console.log(currImg)
+					//change the backgroundimage for the #galleryBar
+
+					$("#galleryBar").css("background-image", "url("+images[currImg]+")" )
+
+
+
+				}
+
+				
+
+			});
+
+	</script>	
+
+	<link href="stylesheet.css" type="text/css" rel="stylesheet"/>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+
+		body{
+			padding:0px;
+			margin:0px;
+		}
+
+		#galleryBar{
+			position:relative;
+			/*border: 1px solid;*/
+			width: 100%;
+			/*min-height:300px;
+			max-height:301px;*/
+			height:400px;
+			padding: 0;
+			background-image: url(photosSurf/1.jpg);
+			background-repeat: no-repeat;
+
+		}
+
+		#leftArrow{
+
+			position: absolute;
+			top:50%;
+			height:35px;
+			width: 30px;
+			background-image: url(photosSurf/left-arrow.png);
+
+		}
+
+		#rightArrow{
+
+			position: absolute;
+			top:50%;
+			right:0px;
+			height:35px;
+			width: 30px;
+			background-image: url(photosSurf/right-arrow.png);
+
+		}
+
+
+		#statement{
+
+			
+			height: 200px;
+			width:100%;
+			background-image: url(photosSurf/statment-box.png);
+			padding-bottom: 40px;
+		}
+
+		#text {
+
+			font-family: Oswald;
+			color:white;
+			z-index: 10;
+			padding:50px;
+			padding-left: 270px;
+			font-size: 22px;
+			line-height: 35px;
+
+		}
+
+		form {
+
+			padding-top: 60px;
+			margin: 0;
+			padding: 0;
+			border: n
+		}
+
+		fieldset #start {
+
+			padding-top:30px;
+			margin:0px;
+			height: 30px;
+			width: 120px;
+		}
+
+		fieldset #Duration {
+
+			padding:0px;
+			margin:0px;
+			height: 30px;
+			width: 120px;
+
+		}
+
+		fieldset #button{
+			padding-left: 80px;
+		}
+
+	  
+	
+
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<nav>
+
+			
+
+			<ul>
+
+				<li>
+					<a href="index.html">HOME</a>
+				</li>
+
+				<li>
+					<a href="about-us.html">ABOUT</a>
+			    </li>
+
+			    <li>
+			    	<a href="contact.html">CONTACT</a>
+			    </li>
+			    
+
+			</ul>
+
+		</nav>
+
+		<div id="galleryBar">
+
+			<div id="leftArrow"></div>
+			<div id="rightArrow"></div>
+
+		</div>
+
+		<div id="statement">
+			
+			<div id="text">
+
+				Be part of an opportunity for children to learn life lessons and <br>stay off the streets. Volunteers receive surfing lessons during <br>the school day  and help teach 
+				the kids after school.
+
+			</div>
+
+		</div>
+
+	
+
+			<form action="/my-handling-form-page" method="get">
+				<fieldset>
+
+
+					<p>
+						<label for="start" style="font-family: Oswald;padding-left:80px;position:relative;">
+							Start Date
+						</label>
+
+						<select name="startDate" id="start">
+							<option value="June 12,2015">June 12, 2015</option>
+							<option value="June 24,2015">June 24, 2015</option>
+							<option value="July 12,2015">July 12, 2015</option>
+							<option value="July 24,2015">July 24, 2015</option>
+							<option value="Aug 12,2015">Aug 12, 2015</option>
+							<option value="Aug 24,2015">Aug 24, 2015</option>
+							<option value="Sept 12,2015">Sept 12, 2015</option>
+							<option value="Sept 24,2015">Sept 24, 2015</option>
+							<option value="Oct 12,2015">Oct 12, 2015</option>
+							<option value="Oct 24,2015">Oct 24, 2015</option>
+							<option value="Nov 12,2015">Nov 12, 2015</option>
+							<option value="Nov 24,2015">Nov 24, 2015</option>
+						</select>
+					</p>
+
+					<p>
+						<label for="Duration" style="font-family: Oswald; padding-left:80px; position:relative;">
+							Duration
+						</label>
+
+							<select name="time staying" id="Duration">
+								<option value="2 weeks">2 Weeks</option>
+								<option value="3 weeks">3 Weeks</option>
+								<option value="4 weeks">4 Weeks</option>
+								<option value="5 weeks">5 Weeks</option>
+							</select>
+
+					</p>
+
+						<div id ="button">
+							<input type="submit" value="Apply" style="font-family: Oswald;"/>
+					    </div>
+					
+
+				</fieldset>
+
+			</form>
+
+		
+
+		<div id="experiences"></div>
+
+
+
+
+
+
+
+
+
+	</div>
+
+</body>
+</html>
