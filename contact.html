@@ -6,6 +6,75 @@
    <link href="stylesheet.css" type="text/css" rel="stylesheet"/>
 
 
+
+   <style type="text/css">
+
+   		.gallery{
+   			position:relative;
+			/*border: 1px solid;*/
+			width: 100%;
+			/*min-height:300px;
+			max-height:301px;*/
+			height:400px;
+			padding: 0;
+			background-image: url(photosSurf/contact.jpg);
+			background-repeat: no-repeat;
+		}
+
+		#contact p{
+
+			height: 200px;
+			width:200px;
+			font-family: Oswald;
+			line-height: 25px;
+			margin-left:240px;
+			margin-top: 60px;
+			padding-top: 30px;
+			line-height: 26px;
+
+
+		}
+
+		fieldset{
+
+			margin-top: 10px;
+			border:0;
+		}
+
+		form{
+			
+			float: left;
+			margin-left: 540px;
+			margin-top: -520px;
+			height: 600px;
+			width:450px;
+			line-height: 35px;
+			font-family: Oswald;
+			
+
+		}
+
+		h6 {
+
+			font-family: Oswald;
+			font-size: 15px;
+			padding: 0;
+			margin: 0;
+			padding-bottom: 5px;
+
+		}
+
+		#notes {
+
+			line-height: 80px;
+
+		}
+
+
+
+	</style>	
+
+
 </head>
 
 
@@ -38,8 +107,88 @@
 			</ul>
 
 		</nav>
-</div>		
+		
 
+	<div class="gallery"></div>	
+
+	<div id="contact">
+
+
+		<p> 
+			<b style="font-size:20px;" >Call Us</b> 
+			<br><b>US:</b>+1 646 240 4545  
+			<br><b>UK:</b> +44 203 318 4004  
+			<br><b>AU:</b> +61 2 8014 9393 
+			<br><b>Office Hours:</b> 7am-4pm GMT
+		<p>
+
+			<form action="/my-handling-form-page" method="get" ><h6 style=" font-size:20px;">Or Fill Out Form</h6>
+				<fieldset>
+
+					<label>First Name: <input type="text" name="firstName"/>
+					</label>
+					<br>
+
+					<label>Last Name: <input type="text" name="lastName"/>
+					</label>
+					<br>
+
+					<label>Email: <input type="text" name="email"/>
+					</label>
+
+					<br>
+					<label for="Country">
+							Country:
+					</label>
+
+						<select name="Country" id="Country">
+							<option value="America">America</option>
+							<option value="Australia">Australia</option>
+							<option value="Italy">Italy</option>
+							<option value="Greece">Greece</option>
+							<option value="Spain">Spain</option>
+						</select>
+						
+						<br>
+						<label>Phone: <input type="text" name="phone"/>
+					    </label>
+
+					    <br>
+					    <label for="Subject">
+							Subject:
+					</label>
+
+						<select name="Subject" id="Subject">
+							<option value="General">General</option>
+							<option value="Volunteer">Volunteer</option>
+							<option value="Cooperation">Cooperation</option>
+							<option value="Link Exchange">Link Exchange</option>
+							<option value="Website Feedback">Website Feedback</option>
+						</select>
+
+						<br>
+
+						<div id="notes">
+						<textarea name="comments" cols="40" row="4">Notes...</textarea>
+						</div>
+
+						<br>
+						<input type="checkbox" name="emails" value="sendMeNewsletters" checked="checked"/> Send me newsletters
+
+						<br>
+						<input type="submit" name="send" value="send" />
+
+
+
+				</fieldset>
+	
+
+			</form>
+
+
+	</div>		
+
+</div>
 
 
 
